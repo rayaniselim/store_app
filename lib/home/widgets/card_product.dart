@@ -11,7 +11,7 @@ class CardProduct extends StatelessWidget {
           height: 200,
           width: 185,
           decoration: BoxDecoration(
-            color: Colors.grey,
+            color: Colors.grey[200],
             borderRadius: BorderRadius.circular(40),
           ),
         ),
@@ -22,7 +22,7 @@ class CardProduct extends StatelessWidget {
           height: 200,
           width: 185,
           decoration: BoxDecoration(
-            color: Colors.grey,
+            color: Colors.grey[200],
             borderRadius: BorderRadius.circular(40),
           ),
         ),

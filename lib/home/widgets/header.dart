@@ -7,10 +7,83 @@ class Header extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 170,
-      // width: 350,
       decoration: BoxDecoration(
-        color: Colors.black,
+        color: Colors.grey[900],
         borderRadius: BorderRadius.circular(40),
+      ),
+      child: Row(
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(
+              left: 12,
+            ),
+            child: Image.asset(
+              'assets/fone.png',
+              fit: BoxFit.contain,
+            ),
+          ),
+          const SizedBox(
+            width: 35,
+          ),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Container(
+                decoration: BoxDecoration(
+                  color: Colors.grey[800],
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                child: const Padding(
+                  padding: EdgeInsets.all(4.0),
+                  child: Text(
+                    'New Product',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                ),
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              const Text(
+                'AirPods Max',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 22,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              const SizedBox(
+                height: 15,
+              ),
+              Container(
+                decoration: BoxDecoration(
+                  color: Colors.orange[700],
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                child: const Padding(
+                  padding: EdgeInsets.only(
+                    left: 14,
+                    right: 14,
+                    top: 4,
+                    bottom: 4,
+                  ),
+                  child: Text(
+                    'Buy Now!',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          )
+        ],
       ),
     );
   }

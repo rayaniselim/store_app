@@ -5,13 +5,45 @@ class AppBarWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final container = Container(
+      height: 12,
+      width: 12,
+      decoration: BoxDecoration(
+        color: Colors.black,
+        borderRadius: BorderRadius.circular(2),
+      ),
+    );
+    const width = SizedBox(width: 4);
     return AppBar(
       backgroundColor: Colors.white,
       elevation: 0,
-      title: const Icon(
-        Icons.ac_unit,
-        color: Colors.pink,
-        size: 30,
+      title: Column(
+        children: [
+          Row(
+            children: [
+              container,
+              width,
+              Container(
+                height: 12,
+                width: 12,
+                decoration: BoxDecoration(
+                  color: Colors.orange[700],
+                  borderRadius: BorderRadius.circular(2),
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(
+            height: 4,
+          ),
+          Row(
+            children: [
+              container,
+              width,
+              container,
+            ],
+          ),
+        ],
       ),
       actions: [
         IconButton(
