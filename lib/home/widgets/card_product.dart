@@ -18,16 +18,18 @@ class CardProduct extends StatelessWidget {
           child: Stack(
             children: [
               Padding(
-                padding: const EdgeInsets.all(10),
+                padding: const EdgeInsets.only(left: 10, right: 10, bottom: 10),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Center(
                       child: Image.asset(
                         'assets/ipad.png',
                         height: 120,
                       ),
+                    ),
+                    const SizedBox(
+                      height: 8,
                     ),
                     Text(
                       'Ipad Air',
@@ -79,16 +81,18 @@ class CardProduct extends StatelessWidget {
           child: Stack(
             children: [
               Padding(
-                padding: const EdgeInsets.all(10),
+                padding: const EdgeInsets.only(left: 10, right: 10, bottom: 10),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Center(
                       child: Image.asset(
                         'assets/fone_black.png',
                         height: 120,
                       ),
+                    ),
+                    const SizedBox(
+                      height: 8,
                     ),
                     Text(
                       'AirPods Max',
