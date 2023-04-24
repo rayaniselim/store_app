@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:store_app/home/widgets/bottom_add.dart';
 
 class CardProduct extends StatelessWidget {
   const CardProduct({super.key});
@@ -14,6 +15,56 @@ class CardProduct extends StatelessWidget {
             color: Colors.grey[200],
             borderRadius: BorderRadius.circular(40),
           ),
+          child: Stack(
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(10),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Center(
+                      child: Image.asset(
+                        'assets/ipad.png',
+                        height: 120,
+                      ),
+                    ),
+                    Text(
+                      'Ipad Air',
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.grey[800],
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 8,
+                    ),
+                    Text(
+                      r'$ 599',
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.grey[600],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.end,
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: const [
+                      BottomAdd(),
+                    ],
+                  ),
+                ],
+              ),
+            ],
+          ),
         ),
         const SizedBox(
           width: 20,
@@ -24,6 +75,56 @@ class CardProduct extends StatelessWidget {
           decoration: BoxDecoration(
             color: Colors.grey[200],
             borderRadius: BorderRadius.circular(40),
+          ),
+          child: Stack(
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(10),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Center(
+                      child: Image.asset(
+                        'assets/fone_black.png',
+                        height: 120,
+                      ),
+                    ),
+                    Text(
+                      'AirPods Max',
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.grey[800],
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 8,
+                    ),
+                    Text(
+                      r'$ 549',
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.grey[600],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.end,
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: const [
+                      BottomAdd(),
+                    ],
+                  ),
+                ],
+              ),
+            ],
           ),
         ),
       ],
