@@ -19,7 +19,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Colors.grey[900],
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -78,9 +78,9 @@ class _HomePageState extends State<HomePage> {
               ),
               Container(
                 height: 200,
-                decoration: const BoxDecoration(
-                  color: Colors.black,
-                  borderRadius: BorderRadius.only(
+                decoration: BoxDecoration(
+                  color: Colors.grey[900],
+                  borderRadius: const BorderRadius.only(
                     topRight: Radius.circular(90),
                   ),
                 ),
@@ -120,10 +120,11 @@ class _HomePageState extends State<HomePage> {
                       const SizedBox(
                         height: 20,
                       ),
+                      //////////////
                       Container(
                         height: 100,
                         decoration: BoxDecoration(
-                          color: Colors.grey,
+                          color: Colors.grey[800],
                           borderRadius: BorderRadius.circular(30),
                         ),
                       )
