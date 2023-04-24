@@ -1,7 +1,16 @@
 import 'package:flutter/material.dart';
 
 class BottomAdd extends StatelessWidget {
-  const BottomAdd({super.key});
+  final Color? colorIcon;
+  final Color? colorContainer;
+  final BorderRadiusGeometry? border;
+
+  const BottomAdd({
+    super.key,
+    required this.colorIcon,
+    required this.colorContainer,
+    required this.border,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -9,18 +18,13 @@ class BottomAdd extends StatelessWidget {
       height: 50,
       width: 50,
       decoration: BoxDecoration(
-        color: Colors.grey[900],
-        borderRadius: const BorderRadius.only(
-          bottomLeft: Radius.circular(12),
-          bottomRight: Radius.circular(40),
-          topLeft: Radius.circular(12),
-          topRight: Radius.circular(12),
-        ),
+        color: colorContainer,
+        borderRadius: border,
       ),
       child: IconButton(
         icon: const Icon(Icons.add),
         onPressed: () {},
-        color: Colors.white,
+        color: colorIcon,
       ),
     );
   }

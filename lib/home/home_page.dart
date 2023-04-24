@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:store_app/home/widgets/app_bar.dart';
 import 'package:store_app/home/widgets/card_product.dart';
+import 'package:store_app/home/widgets/card_product_special.dart';
 import 'package:store_app/home/widgets/list_category.dart';
 import 'package:store_app/home/widgets/product_settings.dart';
 
@@ -70,7 +71,7 @@ class _HomePageState extends State<HomePage> {
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   Container(
-                    height: 200,
+                    height: 100,
                     width: 100,
                     color: Colors.white,
                   )
@@ -120,14 +121,7 @@ class _HomePageState extends State<HomePage> {
                       const SizedBox(
                         height: 20,
                       ),
-                      //////////////
-                      Container(
-                        height: 100,
-                        decoration: BoxDecoration(
-                          color: Colors.grey[800],
-                          borderRadius: BorderRadius.circular(30),
-                        ),
-                      )
+                      const CardProdutcSpecial(),
                     ],
                   ),
                 ),

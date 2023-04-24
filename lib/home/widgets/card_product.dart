@@ -13,7 +13,7 @@ class CardProduct extends StatelessWidget {
           width: 185,
           decoration: BoxDecoration(
             color: Colors.grey[200],
-            borderRadius: BorderRadius.circular(40),
+            borderRadius: BorderRadius.circular(30),
           ),
           child: Stack(
             children: [
@@ -59,8 +59,17 @@ class CardProduct extends StatelessWidget {
                 children: [
                   Row(
                     mainAxisAlignment: MainAxisAlignment.end,
-                    children: const [
-                      BottomAdd(),
+                    children: [
+                      BottomAdd(
+                        colorContainer: Colors.grey[900],
+                        colorIcon: Colors.white,
+                        border: const BorderRadius.only(
+                          bottomLeft: Radius.circular(12),
+                          bottomRight: Radius.circular(30),
+                          topLeft: Radius.circular(12),
+                          topRight: Radius.circular(12),
+                        ),
+                      ),
                     ],
                   ),
                 ],
@@ -76,7 +85,7 @@ class CardProduct extends StatelessWidget {
           width: 185,
           decoration: BoxDecoration(
             color: Colors.grey[200],
-            borderRadius: BorderRadius.circular(40),
+            borderRadius: BorderRadius.circular(30),
           ),
           child: Stack(
             children: [
@@ -122,8 +131,17 @@ class CardProduct extends StatelessWidget {
                 children: [
                   Row(
                     mainAxisAlignment: MainAxisAlignment.end,
-                    children: const [
-                      BottomAdd(),
+                    children: [
+                      BottomAdd(
+                        colorContainer: Colors.grey[900],
+                        colorIcon: Colors.white,
+                        border: const BorderRadius.only(
+                          bottomLeft: Radius.circular(12),
+                          bottomRight: Radius.circular(30),
+                          topLeft: Radius.circular(12),
+                          topRight: Radius.circular(12),
+                        ),
+                      ),
                     ],
                   ),
                 ],
