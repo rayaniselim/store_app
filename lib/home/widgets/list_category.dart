@@ -1,6 +1,4 @@
-import 'package:flutter/material.dart';
-
-import 'card_category.dart';
+import '../../const.dart';
 
 class ListCategory extends StatelessWidget {
   const ListCategory({super.key});
@@ -11,8 +9,8 @@ class ListCategory extends StatelessWidget {
       children: [
         CardCategory(
           title: 'All Product',
-          colorContainer: Colors.orange[700],
-          colorTitle: Colors.white,
+          colorContainer: AppColors.primaryColor,
+          colorTitle: AppColors.primaryBackgroundColor,
           colorBorder: const Color(0xFFFFFFFF),
         ),
         const SizedBox(
@@ -20,7 +18,7 @@ class ListCategory extends StatelessWidget {
         ),
         const CardCategory(
           title: 'Recommendad',
-          colorContainer: Colors.white,
+          colorContainer: AppColors.primaryBackgroundColor,
           colorTitle: Colors.grey,
           colorBorder: Color(0xFF757575),
         ),
@@ -29,13 +27,22 @@ class ListCategory extends StatelessWidget {
         ),
         const CardCategory(
           title: 'New Product',
-          colorContainer: Colors.white,
+          colorContainer: AppColors.primaryBackgroundColor,
           colorTitle: Colors.grey,
           colorBorder: Color(0xFF757575),
         ),
         const SizedBox(
           width: 20,
         ),
+        // const CardCategory(
+        //   title: 'New Product',
+        //   colorContainer: AppColors.primaryBackgroundColor,
+        //   colorTitle: Colors.grey,
+        //   colorBorder: Color(0xFF757575),
+        // ),
+        // const SizedBox(
+        //   width: 20,
+        // ),
       ],
     );
   }

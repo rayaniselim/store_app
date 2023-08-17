@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import '../../const.dart';
 
 class ProductSettings extends StatelessWidget {
   const ProductSettings({super.key});
@@ -19,14 +19,14 @@ class ProductSettings extends StatelessWidget {
           height: 40,
           width: 40,
           decoration: BoxDecoration(
-            color: Colors.orange[700],
+            color: AppColors.primaryColor,
             borderRadius: BorderRadius.circular(10),
           ),
           child: IconButton(
             onPressed: () {},
             icon: const Icon(
               Icons.density_medium_rounded,
-              color: Colors.white,
+              color: AppColors.primaryBackgroundColor,
             ),
           ),
         ),

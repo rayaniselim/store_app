@@ -1,11 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:store_app/home/widgets/app_bar.dart';
-import 'package:store_app/home/widgets/card_product.dart';
-import 'package:store_app/home/widgets/card_product_special.dart';
-import 'package:store_app/home/widgets/list_category.dart';
-import 'package:store_app/home/widgets/product_settings.dart';
-
-import 'widgets/header.dart';
+import '../const.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({
@@ -20,20 +13,20 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[900],
+      backgroundColor: AppColors.secondBackgroundColor,
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           const AppBarWidget(),
           Container(
             decoration: const BoxDecoration(
-              color: Colors.white,
+              color: AppColors.primaryBackgroundColor,
               borderRadius: BorderRadius.only(
                 bottomLeft: Radius.circular(90),
               ),
             ),
-            child: Column(
-              children: const [
+            child: const Column(
+              children: [
                 Padding(
                   padding: EdgeInsets.all(20.0),
                   child: Header(),
@@ -49,7 +42,7 @@ class _HomePageState extends State<HomePage> {
                 ),
                 Padding(
                   padding: EdgeInsets.only(left: 20),
-                  child: ListCategory(),
+                  child: SingleChildScrollView(child: ListCategory()),
                 ),
                 Padding(
                   padding: EdgeInsets.only(
@@ -73,14 +66,14 @@ class _HomePageState extends State<HomePage> {
                   Container(
                     height: 100,
                     width: 100,
-                    color: Colors.white,
+                    color: AppColors.primaryBackgroundColor,
                   )
                 ],
               ),
               Container(
                 height: 200,
                 decoration: BoxDecoration(
-                  color: Colors.grey[900],
+                  color: AppColors.secondBackgroundColor,
                   borderRadius: const BorderRadius.only(
                     topRight: Radius.circular(90),
                   ),
@@ -94,24 +87,24 @@ class _HomePageState extends State<HomePage> {
                   child: Column(
                     children: [
                       Row(
-                        children: const [
-                          Text(
+                        children: [
+                          const Text(
                             'Special for you',
                             style: TextStyle(
-                              color: Colors.white,
+                              color: AppColors.primaryBackgroundColor,
                               fontSize: 25,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             width: 120,
                           ),
                           Padding(
-                            padding: EdgeInsets.only(top: 8.0),
+                            padding: const EdgeInsets.only(top: 8.0),
                             child: Text(
                               'See All',
                               style: TextStyle(
-                                color: Colors.orange,
+                                color: AppColors.primaryColor, // Colors.orange,
                                 fontSize: 15,
                               ),
                             ),

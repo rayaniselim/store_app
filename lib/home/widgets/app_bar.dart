@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../design_system/app_colors.dart';
+
 class AppBarWidget extends StatelessWidget {
   const AppBarWidget({super.key});
 
@@ -15,7 +17,7 @@ class AppBarWidget extends StatelessWidget {
     );
     const width = SizedBox(width: 4);
     return AppBar(
-      backgroundColor: Colors.white,
+      backgroundColor: AppColors.primaryBackgroundColor,
       elevation: 0,
       title: Column(
         children: [
@@ -27,7 +29,7 @@ class AppBarWidget extends StatelessWidget {
                 height: 12,
                 width: 12,
                 decoration: BoxDecoration(
-                  color: Colors.orange[700],
+                  color: AppColors.primaryColor,
                   borderRadius: BorderRadius.circular(2),
                 ),
               ),
@@ -50,7 +52,7 @@ class AppBarWidget extends StatelessWidget {
           onPressed: () {},
           icon: Icon(
             Icons.search,
-            color: Colors.grey[900],
+            color: AppColors.secondBackgroundColor,
             size: 40,
           ),
         ),

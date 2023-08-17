@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import '../../const.dart';
 
 class Header extends StatelessWidget {
   const Header({super.key});
@@ -8,7 +8,7 @@ class Header extends StatelessWidget {
     return Container(
       height: 170,
       decoration: BoxDecoration(
-        color: Colors.grey[900],
+        color: AppColors.secondBackgroundColor,
         borderRadius: BorderRadius.circular(40),
       ),
       child: Row(
@@ -38,8 +38,10 @@ class Header extends StatelessWidget {
                   padding: EdgeInsets.all(4.0),
                   child: Text(
                     'New Product',
+
+                    /// TODO:
                     style: TextStyle(
-                      color: Colors.white,
+                      color: AppColors.primaryBackgroundColor,
                       fontWeight: FontWeight.w500,
                     ),
                   ),
@@ -51,7 +53,7 @@ class Header extends StatelessWidget {
               const Text(
                 'AirPods Max',
                 style: TextStyle(
-                  color: Colors.white,
+                  color: AppColors.primaryBackgroundColor,
                   fontSize: 22,
                   fontWeight: FontWeight.bold,
                 ),
@@ -61,23 +63,36 @@ class Header extends StatelessWidget {
               ),
               Container(
                 decoration: BoxDecoration(
-                  color: Colors.orange[700],
+                  color: AppColors.primaryColor,
                   borderRadius: BorderRadius.circular(8),
                 ),
-                child: const Padding(
-                  padding: EdgeInsets.only(
+                child: Padding(
+                  padding: const EdgeInsets.only(
                     left: 14,
                     right: 14,
                     top: 4,
                     bottom: 4,
                   ),
-                  child: Text(
-                    'Buy Now!',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
+                  child: InkWell(
+                    child: const Text(
+                      'Buy Now!',
+                      style: TextStyle(
+                        color: AppColors.primaryBackgroundColor,
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
+                    onTap: () {
+                      // const SnackBar(
+                      //   content: Text('Yay! A SnackBar!'),
+                      // );
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const ProductPage(),
+                        ),
+                      );
+                    },
                   ),
                 ),
               ),

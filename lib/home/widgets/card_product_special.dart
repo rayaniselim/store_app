@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:store_app/home/widgets/bottom_add.dart';
 
+import '../../design_system/app_colors.dart';
+
 class CardProdutcSpecial extends StatelessWidget {
   const CardProdutcSpecial({super.key});
 
@@ -47,12 +49,12 @@ class CardProdutcSpecial extends StatelessWidget {
             ],
           ),
           const Spacer(),
-          Column(
+          const Column(
             crossAxisAlignment: CrossAxisAlignment.end,
             mainAxisAlignment: MainAxisAlignment.end,
-            children: const [
+            children: [
               BottomAdd(
-                colorContainer: Colors.white,
+                colorContainer: AppColors.primaryBackgroundColor,
                 colorIcon: Colors.black,
                 border: BorderRadius.only(
                   bottomLeft: Radius.circular(12),
