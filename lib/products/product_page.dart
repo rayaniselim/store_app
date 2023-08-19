@@ -1,4 +1,4 @@
-import '../const.dart';
+import '../utils/const.dart';
 
 class ProductPage extends StatefulWidget {
   const ProductPage({super.key});

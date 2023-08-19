@@ -17,8 +17,6 @@ class CardCategory extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      // height: 35,
-      // width: 70,
       decoration: BoxDecoration(
         color: colorContainer,
         borderRadius: BorderRadius.circular(10),

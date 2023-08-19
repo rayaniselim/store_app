@@ -1,49 +1,43 @@
-import '../../const.dart';
+import '../../utils/const.dart';
 
 class ListCategory extends StatelessWidget {
   const ListCategory({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        CardCategory(
-          title: 'All Product',
-          colorContainer: AppColors.primaryColor,
-          colorTitle: AppColors.primaryBackgroundColor,
-          colorBorder: const Color(0xFFFFFFFF),
-        ),
-        const SizedBox(
-          width: 20,
-        ),
-        const CardCategory(
-          title: 'Recommendad',
-          colorContainer: AppColors.primaryBackgroundColor,
-          colorTitle: Colors.grey,
-          colorBorder: Color(0xFF757575),
-        ),
-        const SizedBox(
-          width: 20,
-        ),
-        const CardCategory(
-          title: 'New Product',
-          colorContainer: AppColors.primaryBackgroundColor,
-          colorTitle: Colors.grey,
-          colorBorder: Color(0xFF757575),
-        ),
-        const SizedBox(
-          width: 20,
-        ),
-        // const CardCategory(
-        //   title: 'New Product',
-        //   colorContainer: AppColors.primaryBackgroundColor,
-        //   colorTitle: Colors.grey,
-        //   colorBorder: Color(0xFF757575),
-        // ),
-        // const SizedBox(
-        //   width: 20,
-        // ),
-      ],
+// rx = reativo, valor dinamico q altera o estado da tela
+    final rxSelected = ValueNotifier<int>(0); // TODO: ASP
+
+    return SizedBox(
+      height: 40,
+      child: ListView.builder(
+        scrollDirection: Axis.horizontal,
+        itemCount: categoriesListData.length,
+        itemBuilder: (context, indexAtual) {
+          return Padding(
+            padding: const EdgeInsets.only(
+              left: 10,
+              right: 10,
+            ),
+            child: Row(
+              children: [
+// Builder repsonsavel por alterar o estado da tela
+                ValueListenableBuilder(
+                  valueListenable: rxSelected,
+                  builder: (context, value, _) {
+// Componentes da categoria especies abaixo da app bar
+                    return CategoryComponent(
+                      category: categoriesListData[indexAtual],
+                      selectedItem: rxSelected.value == indexAtual,
+                      onTap: () => rxSelected.value = indexAtual,
+                    );
+                  },
+                ),
+              ],
+            ),
+          );
+        },
+      ),
     );
   }
 }

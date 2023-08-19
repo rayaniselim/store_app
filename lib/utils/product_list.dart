@@ -11,6 +11,6 @@ List<CategoryModel> categoriesListData = [
     categoryProduct: 'New Product',
   ),
   CategoryModel(
-    categoryProduct: '1',
+    categoryProduct: 'Popular',
   ),
 ];

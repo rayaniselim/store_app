@@ -1,4 +1,4 @@
-import '../../const.dart';
+import '../../utils/const.dart';
 
 class Header extends StatelessWidget {
   const Header({super.key});
@@ -6,7 +6,7 @@ class Header extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 170,
+      height: MediaQuery.of(context).size.height * 0.182,
       decoration: BoxDecoration(
         color: AppColors.secondBackgroundColor,
         borderRadius: BorderRadius.circular(40),
@@ -22,9 +22,7 @@ class Header extends StatelessWidget {
               fit: BoxFit.contain,
             ),
           ),
-          const SizedBox(
-            width: 35,
-          ),
+          const SizedBox(width: 35),
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -38,8 +36,6 @@ class Header extends StatelessWidget {
                   padding: EdgeInsets.all(4.0),
                   child: Text(
                     'New Product',
-
-                    /// TODO:
                     style: TextStyle(
                       color: AppColors.primaryBackgroundColor,
                       fontWeight: FontWeight.w500,
@@ -47,9 +43,7 @@ class Header extends StatelessWidget {
                   ),
                 ),
               ),
-              const SizedBox(
-                height: 10,
-              ),
+              const SizedBox(height: 10),
               const Text(
                 'AirPods Max',
                 style: TextStyle(
@@ -58,9 +52,7 @@ class Header extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              const SizedBox(
-                height: 15,
-              ),
+              const SizedBox(height: 15),
               Container(
                 decoration: BoxDecoration(
                   color: AppColors.primaryColor,
@@ -83,9 +75,6 @@ class Header extends StatelessWidget {
                       ),
                     ),
                     onTap: () {
-                      // const SnackBar(
-                      //   content: Text('Yay! A SnackBar!'),
-                      // );
                       Navigator.push(
                         context,
                         MaterialPageRoute(

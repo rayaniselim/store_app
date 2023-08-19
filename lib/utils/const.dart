@@ -8,3 +8,5 @@ export 'package:store_app/home/widgets/header.dart';
 export 'package:store_app/design_system/app_colors.dart';
 export 'package:store_app/products/product_page.dart';
 export 'package:store_app/home/widgets/card_category.dart';
+export '../../../utils/product_list.dart';
+export 'package:store_app/home/widgets/category_component.dart';
