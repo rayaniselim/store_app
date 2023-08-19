@@ -1,13 +1,11 @@
-import 'package:flutter/material.dart';
-import 'package:store_app/home/widgets/bottom_add.dart';
-
-import '../../design_system/app_colors.dart';
+import '../../../utils/const.dart';
 
 class CardProdutcSpecial extends StatelessWidget {
   const CardProdutcSpecial({super.key});
 
   @override
   Widget build(BuildContext context) {
+    const width = SizedBox(width: 20);
     return Container(
       height: 100,
       decoration: BoxDecoration(
@@ -16,18 +14,17 @@ class CardProdutcSpecial extends StatelessWidget {
       ),
       child: Row(
         children: [
-          const SizedBox(
-            width: 20,
-          ),
+          width,
+
+          /// TODO: TROCAR
           Image.asset('assets/mouse.png'),
-          const SizedBox(
-            width: 20,
-          ),
+          width,
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
+                /// TODO: TROCAR
                 'Magic Mouse',
                 style: TextStyle(
                   fontSize: 18,
@@ -49,19 +46,13 @@ class CardProdutcSpecial extends StatelessWidget {
             ],
           ),
           const Spacer(),
-          const Column(
+          Column(
             crossAxisAlignment: CrossAxisAlignment.end,
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
               BottomAdd(
                 colorContainer: AppColors.primaryBackgroundColor,
                 colorIcon: Colors.black,
-                border: BorderRadius.only(
-                  bottomLeft: Radius.circular(12),
-                  bottomRight: Radius.circular(30),
-                  topLeft: Radius.circular(12),
-                  topRight: Radius.circular(12),
-                ),
               ),
             ],
           ),

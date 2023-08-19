@@ -1,16 +1,24 @@
-import '../core/models/category_model.dart';
+import 'package:store_app/utils/const.dart';
 
-List<CategoryModel> categoriesListData = [
-  CategoryModel(
-    categoryProduct: 'All Product',
+List<ProductModel> productListData = [
+  ProductModel(
+    image: Image.asset('assets/fone.png'),
+    nameProduct: 'AirPods Max',
+    priceProduct: r'$  549',
   ),
-  CategoryModel(
-    categoryProduct: 'Recommendad',
+  ProductModel(
+    image: Image.asset('assets/ipad.png'),
+    nameProduct: 'Ipad Air',
+    priceProduct: r'$ 599',
   ),
-  CategoryModel(
-    categoryProduct: 'New Product',
+  ProductModel(
+    image: Image.asset('assets/fone_black.png'),
+    nameProduct: 'AirPods Max',
+    priceProduct: r'$ 549',
   ),
-  CategoryModel(
-    categoryProduct: 'Popular',
+  ProductModel(
+    image: Image.asset('assets/mouse.png'),
+    nameProduct: 'Magic Mouse',
+    priceProduct: r'$ 79',
   ),
 ];

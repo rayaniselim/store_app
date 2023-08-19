@@ -42,7 +42,7 @@ class _HomePageState extends State<HomePage> {
                 ),
                 Padding(
                   padding: EdgeInsets.only(left: 20),
-                  child: SingleChildScrollView(child: ListCategory()),
+                  child: ListCategory(),
                 ),
                 Padding(
                   padding: EdgeInsets.only(
@@ -104,7 +104,7 @@ class _HomePageState extends State<HomePage> {
                             child: Text(
                               'See All',
                               style: TextStyle(
-                                color: AppColors.primaryColor, // Colors.orange,
+                                color: AppColors.primaryColor,
                                 fontSize: 15,
                               ),
                             ),

@@ -1,15 +1,18 @@
-import 'package:flutter/material.dart';
-import 'package:store_app/home/widgets/bottom_add.dart';
-
-import '../../design_system/app_colors.dart';
+import '../../../utils/const.dart';
 
 class CardProduct extends StatelessWidget {
   const CardProduct({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final button = BottomAdd(
+      colorContainer: AppColors.secondBackgroundColor,
+      colorIcon: AppColors.primaryBackgroundColor,
+    );
+
     return Row(
       children: [
+        /// TODO: COMPONENTIZAR
         Container(
           height: 200,
           width: 185,
@@ -25,6 +28,7 @@ class CardProduct extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Center(
+                      /// TODO: TROCAR
                       child: Image.asset(
                         'assets/ipad.png',
                         height: 120,
@@ -62,16 +66,7 @@ class CardProduct extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
-                      BottomAdd(
-                        colorContainer: AppColors.secondBackgroundColor,
-                        colorIcon: AppColors.primaryBackgroundColor,
-                        border: const BorderRadius.only(
-                          bottomLeft: Radius.circular(12),
-                          bottomRight: Radius.circular(30),
-                          topLeft: Radius.circular(12),
-                          topRight: Radius.circular(12),
-                        ),
-                      ),
+                      button,
                     ],
                   ),
                 ],
@@ -134,16 +129,7 @@ class CardProduct extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
-                      BottomAdd(
-                        colorContainer: AppColors.secondBackgroundColor,
-                        colorIcon: AppColors.primaryBackgroundColor,
-                        border: const BorderRadius.only(
-                          bottomLeft: Radius.circular(12),
-                          bottomRight: Radius.circular(30),
-                          topLeft: Radius.circular(12),
-                          topRight: Radius.circular(12),
-                        ),
-                      ),
+                      button,
                     ],
                   ),
                 ],

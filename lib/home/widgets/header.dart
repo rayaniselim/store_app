@@ -17,7 +17,10 @@ class Header extends StatelessWidget {
             padding: const EdgeInsets.only(
               left: 12,
             ),
-            child: Image.asset(
+            child:
+
+                /// TODO: INDEX 0 LIST
+                Image.asset(
               'assets/fone.png',
               fit: BoxFit.contain,
             ),

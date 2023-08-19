@@ -1,15 +1,15 @@
-import 'package:flutter/material.dart';
+import '../../utils/const.dart';
 
 class BottomAdd extends StatelessWidget {
   final Color? colorIcon;
   final Color? colorContainer;
-  final BorderRadiusGeometry? border;
+  // final BorderRadiusGeometry? border;
 
   const BottomAdd({
     super.key,
     required this.colorIcon,
     required this.colorContainer,
-    required this.border,
+    // required this.border,
   });
 
   @override
@@ -19,7 +19,12 @@ class BottomAdd extends StatelessWidget {
       width: 50,
       decoration: BoxDecoration(
         color: colorContainer,
-        borderRadius: border,
+        borderRadius: const BorderRadius.only(
+          bottomLeft: Radius.circular(12),
+          bottomRight: Radius.circular(30),
+          topLeft: Radius.circular(12),
+          topRight: Radius.circular(12),
+        ),
       ),
       child: IconButton(
         icon: const Icon(Icons.add),

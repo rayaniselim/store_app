@@ -1,7 +1,7 @@
-import '../../utils/const.dart';
+import '../../../utils/const.dart';
 
-class ListCategory extends StatelessWidget {
-  const ListCategory({super.key});
+class ListProduct extends StatelessWidget {
+  const ListProduct({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -12,11 +12,11 @@ class ListCategory extends StatelessWidget {
       height: 40,
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
-        itemCount: categoriesListData.length,
+        itemCount: productListData.length,
         itemBuilder: (context, indexAtual) {
           return Padding(
-            padding: const EdgeInsets.only(
-              left: 10,
+            padding: EdgeInsets.only(
+              left: indexAtual == 0 ? 0 : 10,
               right: 10,
             ),
             child: Row(
@@ -26,8 +26,8 @@ class ListCategory extends StatelessWidget {
                   valueListenable: rxSelected,
                   builder: (context, value, _) {
 // Componentes da categoria especies abaixo da app bar
-                    return CategoryComponent(
-                      category: categoriesListData[indexAtual],
+                    return ProductComponent(
+                      category: productListData[indexAtual],
                       selectedItem: rxSelected.value == indexAtual,
                       onTap: () => rxSelected.value = indexAtual,
                     );

@@ -1,7 +1,4 @@
-import 'package:flutter/material.dart';
-
-import '../../core/models/category_model.dart';
-import '../../design_system/app_colors.dart';
+import 'package:store_app/utils/const.dart';
 
 /* Mudanca de estado (cor) dos componentes dos botoes de categoria especies 
 abaixo da app bar
