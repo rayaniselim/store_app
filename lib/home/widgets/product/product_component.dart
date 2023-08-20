@@ -1,4 +1,4 @@
-import '../../../utils/const.dart';
+import '../../../core/utils/const.dart';
 
 /* Mudanca de estado (cor) dos componentes dos botoes de categoria especies 
 abaixo da app bar

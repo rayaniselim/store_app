@@ -1,4 +1,4 @@
-import '../../../utils/const.dart';
+import '../../../core/utils/const.dart';
 
 class ListProduct extends StatelessWidget {
   const ListProduct({super.key});

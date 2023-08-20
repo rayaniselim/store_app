@@ -1,4 +1,4 @@
-import 'package:store_app/utils/const.dart';
+import 'package:store_app/core/utils/const.dart';
 
 List<ProductModel> productListData = [
   ProductModel(

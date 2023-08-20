@@ -1,4 +1,4 @@
-import '../../../utils/const.dart';
+import '../../../core/utils/const.dart';
 
 class CardProdutcSpecial extends StatelessWidget {
   const CardProdutcSpecial({super.key});

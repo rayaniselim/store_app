@@ -1,4 +1,4 @@
-import '../utils/const.dart';
+import '../core/utils/const.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({

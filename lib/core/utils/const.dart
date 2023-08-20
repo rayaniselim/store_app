@@ -10,11 +10,11 @@ export 'package:store_app/home/widgets/category/card_category.dart';
 export 'category_list.dart';
 export 'package:store_app/home/widgets/category/category_component.dart';
 
-export '../../../core/models/product_model.dart';
-export '../../../core/models/category_model.dart';
+export '../../../../core/models/product_model.dart';
+export '../../../../core/models/category_model.dart';
 
 export 'package:store_app/home/widgets/category/list_category.dart';
 
 export 'package:store_app/home/widgets/bottom_add.dart';
 export 'package:store_app/home/widgets/product/product_component.dart';
-export 'package:store_app/utils/product_list.dart';
+export 'package:store_app/core/utils/product_list.dart';

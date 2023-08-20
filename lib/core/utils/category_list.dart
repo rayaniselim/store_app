@@ -1,4 +1,4 @@
-import '../core/models/category_model.dart';
+import '../models/category_model.dart';
 
 List<CategoryModel> categoriesListData = [
   CategoryModel(
