@@ -1,4 +1,5 @@
 import '../core/utils/const.dart';
+import 'widgets/product/list_product.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({
@@ -50,7 +51,7 @@ class _HomePageState extends State<HomePage> {
                     right: 20,
                     top: 35,
                   ),
-                  child: CardProduct(),
+                  child: ListProduct(),
                 ),
                 SizedBox(
                   height: 40,

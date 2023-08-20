@@ -1,8 +1,5 @@
 import '../../../core/utils/const.dart';
 
-/* Mudanca de estado (cor) dos componentes dos botoes de categoria especies 
-abaixo da app bar
-*/
 class ProductComponent extends StatelessWidget {
   final ProductModel category;
   final bool selectedItem;
@@ -17,44 +14,68 @@ class ProductComponent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final button = ButtonAdd(
+      colorContainer: AppColors.secondBackgroundColor,
+      colorIcon: AppColors.primaryBackgroundColor,
+    );
+
+    const height = SizedBox(
+      height: 8,
+    );
     return InkWell(
       onTap: onTap,
       child: Container(
-        padding: const EdgeInsets.all(8),
+        height: 200,
+        width: 185,
         decoration: BoxDecoration(
-          color: selectedItem == true
-              ? AppColors.primaryColor
-              : AppColors.primaryBackgroundColor,
-          borderRadius: BorderRadius.circular(10),
-          border: Border.all(
-            width: 0.2,
-            color: selectedItem == true
-                ? AppColors.primaryColor!
-                : const Color(0xFF757575),
-          ),
+          color: Colors.grey[200],
+          borderRadius: BorderRadius.circular(30),
         ),
-        child: Row(
+        child: Stack(
           children: [
-            /// IMAGE PRODUCT
-            Text(
-              category.nameProduct,
-              style: TextStyle(
-                color: selectedItem == true
-                    ? AppColors.primaryBackgroundColor
-                    : Colors.grey,
-                letterSpacing: -0.8,
-                fontWeight: FontWeight.bold,
+            Padding(
+              padding: const EdgeInsets.only(left: 10, right: 10, bottom: 10),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Center(
+                    child: Image.asset(
+                      category.image,
+                      height: 120,
+                    ),
+                  ),
+                  height,
+                  Text(
+                    category.nameProduct,
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.grey[800],
+                    ),
+                  ),
+                  height,
+                  Text(
+                    category.priceProduct,
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.grey[600],
+                    ),
+                  ),
+                ],
               ),
             ),
-            Text(
-              category.priceProduct,
-              style: TextStyle(
-                color: selectedItem == true
-                    ? AppColors.primaryBackgroundColor
-                    : Colors.grey,
-                letterSpacing: -0.8,
-                fontWeight: FontWeight.bold,
-              ),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.end,
+              crossAxisAlignment: CrossAxisAlignment.end,
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    button,
+                  ],
+                ),
+              ],
             ),
           ],
         ),

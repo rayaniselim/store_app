@@ -1,6 +1,6 @@
 export 'package:flutter/material.dart';
 export 'package:store_app/home/widgets/app_bar.dart';
-export 'package:store_app/home/widgets/product/card_product.dart';
+
 export 'package:store_app/home/widgets/product/card_product_special.dart';
 export 'package:store_app/home/widgets/product_settings.dart';
 export 'package:store_app/home/widgets/header.dart';

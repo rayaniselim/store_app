@@ -1,8 +1,5 @@
 import 'package:store_app/core/utils/const.dart';
 
-/* Mudanca de estado (cor) dos componentes dos botoes de categoria especies 
-abaixo da app bar
-*/
 class CategoryComponent extends StatelessWidget {
   final CategoryModel category;
   final bool selectedItem;

@@ -9,7 +9,7 @@ class ListProduct extends StatelessWidget {
     final rxSelected = ValueNotifier<int>(0); // TODO: ASP
 
     return SizedBox(
-      height: 40,
+      height: 200,
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
         itemCount: productListData.length,
@@ -21,11 +21,10 @@ class ListProduct extends StatelessWidget {
             ),
             child: Row(
               children: [
-// Builder repsonsavel por alterar o estado da tela
+                // Builder repsonsavel por alterar o estado da tela
                 ValueListenableBuilder(
                   valueListenable: rxSelected,
                   builder: (context, value, _) {
-// Componentes da categoria especies abaixo da app bar
                     return ProductComponent(
                       category: productListData[indexAtual],
                       selectedItem: rxSelected.value == indexAtual,

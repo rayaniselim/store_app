@@ -25,7 +25,6 @@ class ListCategory extends StatelessWidget {
                 ValueListenableBuilder(
                   valueListenable: rxSelected,
                   builder: (context, value, _) {
-// Componentes da categoria especies abaixo da app bar
                     return CategoryComponent(
                       category: categoriesListData[indexAtual],
                       selectedItem: rxSelected.value == indexAtual,

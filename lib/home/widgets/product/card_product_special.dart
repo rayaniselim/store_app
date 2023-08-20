@@ -46,11 +46,11 @@ class CardProdutcSpecial extends StatelessWidget {
             ],
           ),
           const Spacer(),
-          Column(
+          const Column(
             crossAxisAlignment: CrossAxisAlignment.end,
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
-              BottomAdd(
+              ButtonAdd(
                 colorContainer: AppColors.primaryBackgroundColor,
                 colorIcon: Colors.black,
               ),

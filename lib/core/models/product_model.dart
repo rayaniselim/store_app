@@ -1,9 +1,7 @@
-import 'package:store_app/core/utils/const.dart';
-
 class ProductModel {
   final String nameProduct;
   final String priceProduct;
-  final Image image;
+  final String image;
 
   ProductModel({
     required this.nameProduct,

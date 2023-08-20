@@ -1,22 +1,22 @@
 import '../../core/utils/const.dart';
 
-class BottomAdd extends StatelessWidget {
+class ButtonAdd extends StatelessWidget {
   final Color? colorIcon;
   final Color? colorContainer;
-  // final BorderRadiusGeometry? border;
 
-  const BottomAdd({
+  const ButtonAdd({
     super.key,
     required this.colorIcon,
     required this.colorContainer,
-    // required this.border,
   });
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
+
     return Container(
-      height: 50,
-      width: 50,
+      height: size.height * 0.055,
+      width: size.width * 0.117,
       decoration: BoxDecoration(
         color: colorContainer,
         borderRadius: const BorderRadius.only(
