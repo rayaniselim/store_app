@@ -1,3 +1,5 @@
+import 'package:asp/asp.dart';
+
 import '../../../core/utils/const.dart';
 
 class ListProduct extends StatelessWidget {
@@ -6,7 +8,7 @@ class ListProduct extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 // rx = reativo, valor dinamico q altera o estado da tela
-    final rxSelected = ValueNotifier<int>(0); // TODO: ASP
+    final rxSelected = Atom<int>(0); // TODO: ASP
 
     return SizedBox(
       height: 200,

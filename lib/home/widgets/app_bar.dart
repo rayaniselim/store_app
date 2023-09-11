@@ -16,9 +16,11 @@ class AppBarWidget extends StatelessWidget {
       ),
     );
     const width = SizedBox(width: 4);
-    return AppBar(
+
+    return SliverAppBar(
       backgroundColor: AppColors.primaryBackgroundColor,
       elevation: 0,
+      floating: true,
       title: Column(
         children: [
           Row(

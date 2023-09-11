@@ -29,3 +29,4 @@ Card de Produtos:
 Others:
 - Posso utilizar SnackBar ao adicionar ao carrinho
 - Configurar o drawer
+- https://dribbble.com/shots/15441443-Bose-Headphones-App
